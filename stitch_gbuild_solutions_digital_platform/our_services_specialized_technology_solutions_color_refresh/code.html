@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | GBuild Solutions</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config Injection -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#144D4E",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#B97137",
+                      "surface-bright": "#EDECEF",
+                      "error": "#982510",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#408F9E",
+                      "surface-variant": "#EDECEF",
+                      "secondary-fixed-dim": "#408F9E",
+                      "surface": "#ffffff",
+                      "secondary-container": "#408F9E",
+                      "primary": "#144D4E",
+                      "on-tertiary": "#ffffff",
+                      "on-surface": "#144D4E",
+                      "error-container": "#ffdad6",
+                      "surface-tint": "#408F9E",
+                      "on-secondary-fixed": "#144D4E",
+                      "on-primary-fixed-variant": "#144D4E",
+                      "primary-fixed-dim": "#408F9E",
+                      "tertiary-fixed": "#B97137",
+                      "surface-container-high": "#EDECEF",
+                      "surface-container-highest": "#EDECEF",
+                      "on-background": "#144D4E",
+                      "on-secondary-fixed-variant": "#144D4E",
+                      "outline": "#408F9E",
+                      "secondary-fixed": "#408F9E",
+                      "on-surface-variant": "#144D4E",
+                      "on-primary-container": "#f8fdff",
+                      "on-tertiary-container": "#fffbff",
+                      "primary-container": "#144D4E",
+                      "tertiary-container": "#B97137",
+                      "on-secondary-container": "#144D4E",
+                      "surface-dim": "#EDECEF",
+                      "tertiary-fixed-dim": "#B97137",
+                      "on-tertiary-fixed": "#144D4E",
+                      "inverse-primary": "#408F9E",
+                      "surface-container-low": "#ffffff",
+                      "on-error": "#ffffff",
+                      "on-primary-fixed": "#144D4E",
+                      "inverse-on-surface": "#EDECEF",
+                      "secondary": "#144D4E",
+                      "primary-fixed": "#408F9E",
+                      "on-error-container": "#982510",
+                      "inverse-surface": "#144D4E",
+                      "background": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#EDECEF"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-md": "24px",
+                      "container-max": "1280px",
+                      "stack-lg": "48px",
+                      "stack-sm": "12px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "margin-desktop": "40px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Urbanist"],
+                      "headline-xl-mobile": ["Urbanist"],
+                      "headline-md": ["Urbanist"],
+                      "body-md": ["Urbanist"],
+                      "label-sm": ["Urbanist"],
+                      "label-md": ["Urbanist"],
+                      "body-lg": ["Urbanist"],
+                      "headline-xl": ["Urbanist"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<nav class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Brand -->
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">architecture</span>
+                GBuild Solutions
+            </div>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center gap-stack-md">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 text-label-md font-label-md opacity-80 scale-95 transition-transform" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-md font-label-md hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all px-2 py-1 rounded" href="#">Solutions</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-md font-label-md hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all px-2 py-1 rounded" href="#">Company</a>
+</div>
+<!-- Trailing Action -->
+<div class="hidden md:block">
+<button class="bg-primary text-on-primary hover:bg-surface-tint transition-colors px-6 py-2 rounded-DEFAULT text-label-md font-label-md shadow-sm">
+                    Build with Us
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col">
+<!-- Hero Section -->
+<header class="w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-stack-lg md:py-24 grid grid-cols-1 md:grid-cols-12 gap-gutter relative">
+<div class="md:col-span-8 flex flex-col gap-stack-md z-10 fade-in-up">
+<div class="flex items-center gap-2">
+<span class="w-8 h-[1px] bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary tracking-widest uppercase">System Capabilities</span>
+</div>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface">
+                    Engineering Precision at Scale.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    We deliver structurally sound, high-performance technical architectures. From predictive AI models to rigorous automation frameworks, our solutions are built for execution, not speculation.
+                </p>
+<div class="pt-stack-sm">
+<button class="border border-secondary text-secondary hover:bg-secondary hover:text-on-secondary transition-colors px-6 py-3 rounded-DEFAULT text-label-md font-label-md">
+                        Review Technical Specifications
+                    </button>
+</div>
+</div>
+<!-- Abstract Blueprint Graphic (CSS/HTML only for structural feel) -->
+<div class="hidden md:block md:col-span-4 relative opacity-50 select-none fade-in-up" style="transition-delay: 0.2s;">
+<div class="absolute inset-0 border border-outline-variant grid grid-cols-4 grid-rows-4">
+<div class="border-b border-r border-outline-variant"></div>
+<div class="border-b border-r border-outline-variant bg-surface-container-high/30"></div>
+<div class="border-b border-r border-outline-variant"></div>
+<div class="border-b border-outline-variant bg-primary/5"></div>
+<div class="border-b border-r border-outline-variant"></div>
+<div class="border-b border-r border-outline-variant"></div>
+<div class="border-b border-r border-outline-variant bg-tertiary/5"></div>
+<div class="border-b border-outline-variant"></div>
+</div>
+</div>
+</header>
+<!-- Services Grid - Bento/Asymmetric Layout -->
+<section class="w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-stack-lg grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Service 1: AI Solutions -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col fade-in-up">
+<div class="p-6 border-b border-outline-variant flex justify-between items-start bg-surface-bright rounded-t-DEFAULT">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 border border-outline-variant bg-surface flex items-center justify-center rounded-DEFAULT">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'wght' 300;">memory</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">AI Solutions</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface bg-tertiary-fixed px-2 py-1 rounded-DEFAULT border border-tertiary-fixed-dim">SYS.01</span>
+</div>
+<div class="p-6 flex-grow flex flex-col gap-stack-md">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant border-b border-outline-variant pb-1 inline-block w-max">Technical Depth</h3>
+<p class="font-body-md text-body-md text-on-surface">Deployment of custom LLM fine-tuning pipelines, RAG architectures, and predictive modeling algorithms housed within rigorous Kubernetes environments.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant border-b border-outline-variant pb-1 inline-block w-max">Business Value</h3>
+<p class="font-body-md text-body-md text-on-surface">Exponential reduction in manual data processing overhead. Facilitates deterministic, data-driven decision making at enterprise scale.</p>
+</div>
+</div>
+<div class="mt-auto pt-4">
+<a class="font-label-md text-label-md text-tertiary underline hover:text-on-tertiary-fixed-variant transition-colors inline-flex items-center gap-1" href="#">
+                            Explore Architecture <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Service 2: Custom CRM Systems -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col fade-in-up" style="transition-delay: 0.1s;">
+<div class="p-6 border-b border-outline-variant flex justify-between items-start bg-surface-bright rounded-t-DEFAULT">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 border border-outline-variant bg-surface flex items-center justify-center rounded-DEFAULT">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'wght' 300;">group_work</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Custom CRM Systems</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface bg-primary-fixed px-2 py-1 rounded-DEFAULT border border-primary-fixed-dim">SYS.02</span>
+</div>
+<div class="p-6 flex-grow flex flex-col gap-stack-md">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant border-b border-outline-variant pb-1 inline-block w-max">Technical Depth</h3>
+<p class="font-body-md text-body-md text-on-surface">Relational database engineering (PostgreSQL/Cloud SQL) mapped to bespoke frontend dashboards. Secure, role-based access control (RBAC) implementation.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant border-b border-outline-variant pb-1 inline-block w-max">Business Value</h3>
+<p class="font-body-md text-body-md text-on-surface">Centralized source of truth for client interactions. Eliminates data silos and accelerates sales cycle velocity through automated tracking.</p>
+</div>
+</div>
+<div class="mt-auto pt-4">
+<a class="font-label-md text-label-md text-tertiary underline hover:text-on-tertiary-fixed-variant transition-colors inline-flex items-center gap-1" href="#">
+                            View Schema Diagrams <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Service 3: Web & SaaS Development -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col fade-in-up" style="transition-delay: 0.2s;">
+<div class="p-6 border-b border-outline-variant flex justify-between items-start bg-surface-bright rounded-t-DEFAULT">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 border border-outline-variant bg-surface flex items-center justify-center rounded-DEFAULT">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'wght' 300;">cloud_sync</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Web &amp; SaaS Development</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-variant px-2 py-1 rounded-DEFAULT border border-outline-variant">SYS.03</span>
+</div>
+<div class="p-6 flex-grow flex flex-col gap-stack-md">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant border-b border-outline-variant pb-1 inline-block w-max">Technical Depth</h3>
+<p class="font-body-md text-body-md text-on-surface">Full-stack React/Node.js application development. Microservices architecture designed for horizontal scaling and high availability.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant border-b border-outline-variant pb-1 inline-block w-max">Business Value</h3>
+<p class="font-body-md text-body-md text-on-surface">Rapid market deployment of resilient software products. Ensures seamless user experiences with zero-downtime continuous integration.</p>
+</div>
+</div>
+<div class="mt-auto pt-4">
+<a class="font-label-md text-label-md text-tertiary underline hover:text-on-tertiary-fixed-variant transition-colors inline-flex items-center gap-1" href="#">
+                            Inspect Tech Stack <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Service 4: Automation & Workflows -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col fade-in-up" style="transition-delay: 0.3s;">
+<div class="p-6 border-b border-outline-variant flex justify-between items-start bg-surface-bright rounded-t-DEFAULT">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 border border-outline-variant bg-surface flex items-center justify-center rounded-DEFAULT">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'wght' 300;">precision_manufacturing</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Automation &amp; Workflows</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface bg-secondary-fixed px-2 py-1 rounded-DEFAULT border border-secondary-fixed-dim">SYS.04</span>
+</div>
+<div class="p-6 flex-grow flex flex-col gap-stack-md">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant border-b border-outline-variant pb-1 inline-block w-max">Technical Depth</h3>
+<p class="font-body-md text-body-md text-on-surface">Integration of disparate APIs via custom middleware. Event-driven serverless functions (AWS Lambda/GCP Functions) triggering synchronous actions.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant border-b border-outline-variant pb-1 inline-block w-max">Business Value</h3>
+<p class="font-body-md text-body-md text-on-surface">Transforms complex manual operational sequences into predictable, error-free background processes. Recoups significant human capital.</p>
+</div>
+</div>
+<div class="mt-auto pt-4">
+<a class="font-label-md text-label-md text-tertiary underline hover:text-on-tertiary-fixed-variant transition-colors inline-flex items-center gap-1" href="#">
+                            Analyze Event Logs <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-highest dark:bg-surface-dim border-t border-outline-variant dark:border-outline mt-auto w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg w-full px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2 flex flex-col gap-4">
+<div class="text-headline-sm font-headline-sm font-bold text-on-surface dark:text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">architecture</span>
+                    GBuild Solutions
+                </div>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-sm">
+                    Architecting the infrastructure for tomorrow's technology leaders. Precision, stability, and scale.
+                </p>
+<div class="text-label-sm font-label-sm text-on-surface-variant mt-auto pt-4 border-t border-outline-variant/50 w-max">
+                    © 2024 GBuild Solutions. Engineering the future of AI &amp; SaaS.
+                </div>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Navigation</span>
+<nav class="flex flex-col gap-3">
+<a class="text-primary dark:text-primary-fixed underline text-label-sm font-label-sm hover:text-tertiary transition-colors w-max focus:ring-2 ring-primary-container outline-none rounded-sm" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary text-label-sm font-label-sm transition-colors w-max focus:ring-2 ring-primary-container outline-none rounded-sm" href="#">Solutions</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary text-label-sm font-label-sm transition-colors w-max focus:ring-2 ring-primary-container outline-none rounded-sm" href="#">Company</a>
+</nav>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Legal</span>
+<nav class="flex flex-col gap-3">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary text-label-sm font-label-sm transition-colors w-max focus:ring-2 ring-primary-container outline-none rounded-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary text-label-sm font-label-sm transition-colors w-max focus:ring-2 ring-primary-container outline-none rounded-sm" href="#">Terms of Service</a>
+</nav>
+</div>
+</div>
+</footer>
+<!-- Simple Intersection Observer for Animations -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-up').forEach((el) => observer.observe(el));
+        });
+    </script>
+</body></html>

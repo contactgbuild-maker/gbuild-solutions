@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GBuild Solutions - Build with Us</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#EDECEF",
+                        "on-primary": "#EDECEF",
+                        "tertiary": "#982510",
+                        "surface-bright": "#EDECEF",
+                        "error": "#982510",
+                        "on-secondary": "#EDECEF",
+                        "outline-variant": "#408F9E",
+                        "surface-variant": "#EDECEF",
+                        "secondary-fixed-dim": "#B97137",
+                        "surface": "#EDECEF",
+                        "secondary-container": "#B97137",
+                        "primary": "#408F9E",
+                        "on-tertiary": "#EDECEF",
+                        "on-surface": "#144D4E",
+                        "error-container": "#982510",
+                        "surface-tint": "#144D4E",
+                        "on-secondary-fixed": "#EDECEF",
+                        "on-primary-fixed-variant": "#EDECEF",
+                        "primary-fixed-dim": "#408F9E",
+                        "tertiary-fixed": "#982510",
+                        "surface-container-high": "#EDECEF",
+                        "surface-container-highest": "#EDECEF",
+                        "on-background": "#144D4E",
+                        "on-secondary-fixed-variant": "#EDECEF",
+                        "outline": "#B97137",
+                        "secondary-fixed": "#B97137",
+                        "on-surface-variant": "#144D4E",
+                        "on-primary-container": "#EDECEF",
+                        "on-tertiary-container": "#EDECEF",
+                        "primary-container": "#408F9E",
+                        "tertiary-container": "#982510",
+                        "on-secondary-container": "#EDECEF",
+                        "surface-dim": "#EDECEF",
+                        "tertiary-fixed-dim": "#982510",
+                        "on-tertiary-fixed": "#EDECEF",
+                        "inverse-primary": "#408F9E",
+                        "surface-container-low": "#EDECEF",
+                        "on-error": "#EDECEF",
+                        "on-primary-fixed": "#EDECEF",
+                        "inverse-on-surface": "#EDECEF",
+                        "secondary": "#B97137",
+                        "primary-fixed": "#408F9E",
+                        "on-error-container": "#EDECEF",
+                        "inverse-surface": "#144D4E",
+                        "background": "#EDECEF",
+                        "surface-container-lowest": "#EDECEF",
+                        "surface-container": "#EDECEF"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "container-max": "1280px",
+                        "stack-lg": "48px",
+                        "stack-sm": "12px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Urbanist"],
+                        "headline-xl-mobile": ["Urbanist"],
+                        "headline-md": ["Urbanist"],
+                        "body-md": ["Urbanist"],
+                        "label-sm": ["Urbanist"],
+                        "label-md": ["Urbanist"],
+                        "body-lg": ["Urbanist"],
+                        "headline-xl": ["Urbanist"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .grid-bg {
+            background-image: 
+                linear-gradient(to right, rgba(64, 143, 158, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(64, 143, 158, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .tech-shadow {
+            box-shadow: 0 1px 2px 0 rgba(20, 77, 78, 0.1);
+        }
+        .tech-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 4px 4px 0px 0px #408F9E;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface docked full-width top-0 border-b border-outline-variant shadow-sm z-50 sticky">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="text-headline-md font-headline-md font-bold text-primary">
+                GBuild Solutions
+            </div>
+<nav class="hidden md:flex gap-stack-md items-center h-full">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md h-full flex items-center" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md h-full flex items-center" href="#">Solutions</a>
+<a class="text-primary border-b-2 border-primary pb-1 text-label-md font-label-md h-full flex items-center mt-1" href="#">Company</a>
+</nav>
+<div class="hidden md:flex items-center">
+<button class="bg-primary text-on-primary px-4 py-2 rounded font-label-md text-label-md hover:bg-surface-tint hover:text-on-primary border border-primary transition-all opacity-80 scale-95 transition-transform">
+                    Build with Us
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow grid-bg">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-stack-lg md:py-[120px] max-w-container-max mx-auto border-b border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 flex flex-col gap-stack-md">
+<span class="text-label-sm font-label-sm text-tertiary tracking-widest uppercase bg-surface-container-high px-2 py-1 w-max rounded-sm border border-outline-variant">Digital Transformation Engine</span>
+<h1 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl-mobile md:font-headline-xl text-on-surface">
+                        Architecting the Modern Enterprise.
+                    </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-[600px]">
+                        We engineer robust, scalable software systems that accelerate business digitalization. Transition from legacy constraints to intelligent, automated workflows built on precision architecture.
+                    </p>
+<div class="flex gap-stack-sm pt-stack-sm">
+<button class="bg-primary text-on-primary px-6 py-3 rounded text-label-md font-label-md hover:bg-surface-tint transition-colors flex items-center gap-2">
+                            Schedule Technical Consultation
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+<button class="bg-surface text-secondary px-6 py-3 rounded text-label-md font-label-md border border-secondary hover:bg-secondary-container transition-colors">
+                            View Case Studies
+                        </button>
+</div>
+</div>
+<div class="md:col-span-5 mt-stack-md md:mt-0 relative">
+<div class="aspect-square bg-surface border border-outline-variant rounded-lg p-base tech-shadow overflow-hidden group">
+<div class="bg-cover bg-center w-full h-full rounded bg-surface-variant group-hover:scale-105 transition-transform duration-700" data-alt="A detailed, high-contrast abstract visualization of a digital twin or enterprise software architecture. The image features a network of interconnected nodes and geometric server racks illuminated by sharp teal and deep green accent lights. The background is a clean, structural grid in light grey. The overall mood is precise, authoritative, and deeply technical, reflecting a modern corporate engineering aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwAwhYIojKcqSdULYhgiPa8kT4nBQk3s7BjTJSRwL0yBXrQwvb-ZiX-9dk7rnrExFIBtProIZrjE7pPiCvJ5nPvlbEiyMEIorUK5dCbgXty78Sdsk8EgMdVoFrlVhdbuQIgviE5xQc6Wjx2azFgQPYfAYa-_Xg0u8L2k1BFHcUeRm5FR5aVY-4DrlNDiTYM_lEKJg45O0KwxFFzAtawkxPnUlPrEUmGaSbKKS6r6FvxyvAYxM90Jv1-G84waqupzYDTvTOfOIed6Il')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Bento Grid -->
+<section class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="mb-stack-lg">
+<h2 class="text-headline-lg font-headline-lg text-on-surface border-b-2 border-primary pb-2 inline-block">The Engineering Process</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-stack-sm max-w-2xl">A rigorous, phase-gated methodology designed to mitigate risk and ensure architectural integrity from discovery to deployment.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-base">
+<!-- Discovery -->
+<div class="bg-surface border border-outline-variant p-stack-md rounded tech-shadow tech-hover flex flex-col justify-between transition-all md:col-span-2">
+<div>
+<div class="flex items-center justify-between mb-stack-sm border-b border-outline-variant pb-base">
+<span class="text-label-md font-label-md text-tertiary">PHASE 01</span>
+<div class="w-8 h-8 bg-surface-container-high rounded-sm flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+</div>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Discovery &amp; Systems Analysis</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">We map your existing infrastructure, identifying bottlenecks and legacy technical debt. This phase results in a comprehensive systems schematic and digital readiness audit.</p>
+</div>
+<div class="mt-stack-md flex gap-2 flex-wrap">
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-1 rounded text-on-surface-variant border border-outline-variant">Infrastructure Audit</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-1 rounded text-on-surface-variant border border-outline-variant">Feasibility Study</span>
+</div>
+</div>
+<!-- Strategy -->
+<div class="bg-surface border border-outline-variant p-stack-md rounded tech-shadow tech-hover flex flex-col justify-between transition-all">
+<div>
+<div class="flex items-center justify-between mb-stack-sm border-b border-outline-variant pb-base">
+<span class="text-label-md font-label-md text-secondary">PHASE 02</span>
+<div class="w-8 h-8 bg-surface-container-high rounded-sm flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant">account_tree</span>
+</div>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Architecture Strategy</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Designing the blueprint. We select the optimal tech stack and define data models ensuring high availability and scalability.</p>
+</div>
+<div class="mt-stack-md">
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-1 rounded text-on-surface-variant border border-outline-variant block w-fit">Blueprint Design</span>
+</div>
+</div>
+<!-- Engineering -->
+<div class="bg-surface border border-outline-variant p-stack-md rounded tech-shadow tech-hover flex flex-col justify-between transition-all">
+<div>
+<div class="flex items-center justify-between mb-stack-sm border-b border-outline-variant pb-base">
+<span class="text-label-md font-label-md text-primary">PHASE 03</span>
+<div class="w-8 h-8 bg-primary-container rounded-sm flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">code</span>
+</div>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Core Engineering</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Agile, sprint-based development. Clean code, automated testing pipelines, and continuous integration.</p>
+</div>
+</div>
+<!-- Evolution -->
+<div class="bg-surface border border-outline-variant p-stack-md rounded tech-shadow tech-hover flex flex-col justify-between transition-all md:col-span-2">
+<div>
+<div class="flex items-center justify-between mb-stack-sm border-b border-outline-variant pb-base">
+<span class="text-label-md font-label-md text-tertiary-container">PHASE 04</span>
+<div class="w-8 h-8 bg-surface-container-high rounded-sm flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant">update</span>
+</div>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Deployment &amp; Evolution</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Seamless migration and deployment. Post-launch, we provide continuous telemetry monitoring and iterative enhancements to adapt to changing market dynamics.</p>
+</div>
+<div class="mt-stack-md flex gap-2 flex-wrap">
+<span class="text-label-sm font-label-sm bg-secondary-container px-2 py-1 rounded text-on-secondary-container border border-outline-variant">CI/CD Pipeline</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-1 rounded text-on-surface-variant border border-outline-variant">Telemetry</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto mb-stack-lg">
+<div class="bg-surface border border-outline-variant rounded-lg p-stack-lg flex flex-col md:flex-row items-center justify-between gap-stack-md tech-shadow relative overflow-hidden">
+<!-- Abstract architectural background element -->
+<div class="absolute right-0 top-0 w-1/2 h-full bg-surface-container-low opacity-50 transform skew-x-12 translate-x-20 z-0"></div>
+<div class="z-10 max-w-2xl">
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-stack-sm">Ready to build the foundation?</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Engage our engineering team for a rigorous assessment of your digital transformation roadmap.</p>
+</div>
+<div class="z-10 w-full md:w-auto">
+<button class="w-full md:w-auto bg-primary text-on-primary px-8 py-4 rounded text-label-md font-label-md hover:bg-surface-tint transition-colors flex items-center justify-center gap-2">
+                        Initiate Project
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest w-full border-t border-outline-variant mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg w-full px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="flex flex-col gap-stack-sm">
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface">GBuild Solutions</span>
+<p class="text-body-md font-body-md text-primary mt-2">© 2024 GBuild Solutions. Engineering the future of AI &amp; SaaS.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-sm font-label-sm text-on-surface-variant mb-2">PLATFORM</span>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-tertiary transition-colors" href="#">Services</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-tertiary transition-colors" href="#">Solutions</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-sm font-label-sm text-on-surface-variant mb-2">CORPORATE</span>
+<a class="text-label-sm font-label-sm text-primary underline hover:text-tertiary transition-colors focus:ring-2 focus:ring-primary-container" href="#">Company</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-tertiary transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-tertiary transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-sm font-label-sm text-on-surface-variant mb-2">SYSTEM STATUS</span>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">All Systems Operational</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

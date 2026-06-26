@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+:root {
+  --background: #edecef;
+  --surface: rgba(237, 236, 239, 0.82);
+  --surface-strong: #edecef;
+  --foreground: #144d4e;
+  --card: #0d1719;
+  --card-foreground: #f5f7f8;
+  --muted: rgba(20, 77, 78, 0.72);
+  --muted-foreground: rgba(20, 77, 78, 0.72);
+  --line: rgba(64, 143, 158, 0.42);
+  --teal: #408f9e;
+  --teal-strong: #144d4e;
+  --sand: #b97137;
+  --rust: #982510;
+  --ink-soft: rgba(20, 77, 78, 0.84);
+  --dark: #144d4e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-line: var(--line);
+  --color-teal: var(--teal);
+  --color-teal-strong: var(--teal-strong);
+  --color-sand: var(--sand);
+  --color-rust: var(--rust);
+  --color-ink-soft: var(--ink-soft);
+  --color-dark: var(--dark);
+  --font-sans: var(--font-urbanist);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-urbanist), Arial, sans-serif;
+}
+
+::selection {
+  background: rgba(64, 143, 158, 0.2);
+}
+
+@layer base {
+  * {
+    border-color: var(--line);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer utilities {
+  .container-shell {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-6 lg:px-8;
+  }
+
+  .stitch-grid-shell {
+    background-image:
+      linear-gradient(rgba(64, 143, 158, 0.09) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(64, 143, 158, 0.09) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-color: var(--background);
+  }
+
+  .stitch-kicker {
+    @apply inline-flex border-l-2 border-rust pl-3 text-[0.74rem] uppercase tracking-[0.24em] text-rust;
+  }
+
+  .stitch-card {
+    @apply border border-line bg-surface-strong;
+    box-shadow: 0 12px 26px rgba(20, 77, 78, 0.05);
+  }
+
+  .stitch-panel {
+    @apply border border-line bg-surface;
+  }
+
+  .stitch-frame {
+    @apply border border-line bg-surface;
+    box-shadow: 0 20px 60px rgba(20, 77, 78, 0.12);
+  }
+
+  .stitch-button-primary {
+    @apply inline-flex items-center justify-center border border-teal bg-teal px-6 py-3 text-sm text-white transition-colors hover:bg-teal-strong;
+  }
+
+  .stitch-button-secondary {
+    @apply inline-flex items-center justify-center border border-rust bg-transparent px-6 py-3 text-sm text-rust transition-colors hover:bg-rust/6;
+  }
+
+  .stitch-node {
+    @apply flex min-h-28 items-center justify-center border border-line bg-white/60 px-4 text-center text-sm uppercase tracking-[0.14em] text-foreground;
+  }
+
+  .stitch-core-node {
+    @apply mx-auto grid min-h-44 w-full max-w-[16rem] place-items-center border border-teal bg-dark px-5 text-center text-sm uppercase tracking-[0.16em] text-white;
+    box-shadow: 0 24px 48px rgba(20, 77, 78, 0.22);
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(64, 143, 158, 0.12) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(64, 143, 158, 0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .loader {
+    @apply inline-block h-10 w-10 rounded-full border-2 border-white/20 border-t-white;
+    animation: spin 0.8s linear infinite;
+  }
+
+  .animate-spotlight {
+    animation: spotlight 2.2s ease 0.4s 1 forwards;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.55);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
