@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ContactInquiryForm } from "@/components/contact-inquiry-form";
 import { companyContact } from "@/lib/contact-info";
 import { TestimonialSection } from "@/components/ui/testimonials";
 
@@ -162,28 +163,7 @@ export default function AboutPage() {
               </Link>
             </div>
 
-            <form className="mt-8 grid gap-4 border border-line bg-background p-6">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <input className="border border-line bg-background px-4 py-3 outline-none" placeholder="First Name" />
-                <input className="border border-line bg-background px-4 py-3 outline-none" placeholder="Last Name" />
-              </div>
-              <input className="border border-line bg-background px-4 py-3 outline-none" placeholder="Work Email" />
-              <input className="border border-line bg-background px-4 py-3 outline-none" placeholder="Company / Organization" />
-              <select className="border border-line bg-background px-4 py-3 outline-none">
-                <option>Cloud Architecture Restructuring</option>
-                <option>AI and LLM Enterprise Integration</option>
-                <option>High-Availability Database Design</option>
-                <option>Other Technical Inquiry</option>
-              </select>
-              <textarea
-                rows={5}
-                className="border border-line bg-background px-4 py-3 outline-none"
-                placeholder="Project Scope / Technical Details"
-              />
-              <button type="submit" className="stitch-button-primary w-fit">
-                Submit Inquiry
-              </button>
-            </form>
+            <ContactInquiryForm source="about_page" />
           </div>
 
           <div className="grid gap-6">
@@ -201,6 +181,7 @@ export default function AboutPage() {
                 <div className="text-sm leading-7 text-ink-soft">
                   <p className="mb-1 text-muted">Contact</p>
                   <p>{companyContact.phoneDisplay}</p>
+                  <p>{companyContact.inquiryEmail}</p>
                   <p>Same number on WhatsApp</p>
                 </div>
               </div>
@@ -220,6 +201,9 @@ export default function AboutPage() {
                   <p className="mb-1 text-muted">Actions</p>
                   <Link href={companyContact.whatsappUrl} target="_blank" rel="noreferrer" className="text-teal hover:underline">
                     Open WhatsApp Chat
+                  </Link>
+                  <Link href={`mailto:${companyContact.inquiryEmail}`} className="block text-teal hover:underline">
+                    Email {companyContact.inquiryEmail}
                   </Link>
                   <p>{companyContact.phoneDisplay}</p>
                 </div>
